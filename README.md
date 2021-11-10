@@ -1,8 +1,8 @@
 ## Mobile-Dev
 # Vaekn
-Kevin Santiago Bohorquez Lozano : Scrum Master.
-.
-.
-Victor Daniel Rey Valencia : Product Owne.
-.
-.
+
+Scrum Máster:	Kevin Bohorquez
+Product Owner:	Daniel Rey
+Administrador BD: Estyben Caicedo
+Analista: Armando Ospina
+Desarrollador: Nataly Mendoza

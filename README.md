@@ -1,9 +1,9 @@
 ## Mobile-Dev
 # Vaekn
 
-Scrum Máster:	Kevin Bohorquez
-Product Owner:	Daniel Rey
-Administrador BD: Estyben Caicedo
-Analista: Armando Ospina
-Desarrollador: Nataly Mendoza
 Creando el primer commit 
+  1. **Desarrollador** - Nataly Mendoza
+  2. **Analista** - Armando Ospina
+  3. **Product Owner** - Daniel Rey
+  4. **Administrador de BD** - Estyben Caicedo
+  5. **Scrum Master** - Kevin Bohorquez

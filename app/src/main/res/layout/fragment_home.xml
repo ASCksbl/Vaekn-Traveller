@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.home.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/imgCity"
+        android:layout_width="match_parent"
+        android:layout_height="264dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/cartagena">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_background"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Cartagena"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtDesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCity"
+        android:text="Description"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDesTitle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="City that is located on the shores of the Caribbean Sea. Its colorful streets full of charm make it the gateway to South America. In Colombia, it is located in the north of the country, and is the capital of the Bolívar region."
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Temperature: 32°"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/txtDescription"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTemperature"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onLocate"
+        android:text="Location" />
+
+</RelativeLayout>

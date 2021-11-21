@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045997200356",
+    "project_id": "traveller-f616d",
+    "storage_bucket": "traveller-f616d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045997200356:android:aae8942414f46e755c5df1",
+        "android_client_info": {
+          "package_name": "com.sdascension.traveller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045997200356-2svlu4mm75oebu68j8r0t0kni4stcfuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArsQDCKwvGcOzTSJHDL9zOqCIwSCDMXJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045997200356-2svlu4mm75oebu68j8r0t0kni4stcfuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

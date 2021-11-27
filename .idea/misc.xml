@@ -29,14 +29,21 @@
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/fragment_info.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/fragment_map.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/fragment_poi.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/fragment_preference.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/fragment_slideshow.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/poi.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/layout/settings_activity.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/menu/activity_main_drawer.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/menu/logout_menu.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/menu/main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/menu/menu.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/menu/settings.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_app_launcher.xml" value="0.21197916666666666" />
         <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_app_launcher_round.xml" value="0.3671875" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/xml/preference.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/xml/preferences.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Santiago/Downloads/KOTLIN Android Programs/Proyecto/app/src/main/res/xml/root_preferences.xml" value="0.35104166666666664" />
       </map>
     </option>
   </component>

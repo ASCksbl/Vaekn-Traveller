@@ -56,9 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     // Function for the options in the right corner menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.logout_menu, menu)
-        // TODO: Set the settings layout and functionality
-        menuInflater.inflate(R.menu.settings, menu)
+        menuInflater.inflate(R.menu.options_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -83,6 +81,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
             return true
+        } else if (item.itemId == R.id.action_settings) {
+            val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }

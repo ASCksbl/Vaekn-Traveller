@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Notifications"
+        android:icon="@drawable/ic_notification">
+        <SwitchPreferenceCompat android:key="notification"
+            android:title="Notifications"
+            android:summaryOn="Click to disable notifications"
+            android:summaryOff="Click to allow notifications"
+            android:defaultValue="false"/>
+        <SwitchPreferenceCompat
+            android:dependency="notification"
+            android:key="notificationSound"
+            android:title="Notification Sound"
+            android:summaryOn="Click to disable notifications sound"
+            android:summaryOff="Click to allow notifications sound"
+            android:defaultValue="false"/>
+        <SeekBarPreference
+            android:dependency="notificationSound"
+            android:key="notificationVolume"
+            android:title="Volume"
+            app:showSeekBarValue="true"
+            app:defaultValue="50"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

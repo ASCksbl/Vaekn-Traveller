@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sdascension.traveller.ApiService
 import com.sdascension.traveller.R
 import com.sdascension.traveller.databinding.FragmentPoiBinding
 import com.sdascension.traveller.pages.info.InfoFragment
@@ -47,7 +46,7 @@ class PoiFragment : Fragment() {
                     fun showData(poi: List<Poi>) {
                         view.recyclerView.apply {
                             layoutManager = LinearLayoutManager(activity)
-                            adapter = PoiAdapter(poi) { poi -> poiOnClick(poi) }
+                            adapter = PoiAdapter(poi, context) { poi -> poiOnClick(poi) }
                         }
                     }
                     showData(response.body()!!)
@@ -73,12 +72,14 @@ class PoiFragment : Fragment() {
         }
     }
 
+
     // Function to intent and navigate to Info
     private fun navigateToInfo(poi: Poi) {
         val intent = Intent(activity, InfoFragment::class.java).apply {
             putExtra(KEY_TITLE, poi.title)
             putExtra(KEY_DESCRIPTION, poi.description)
             putExtra(KEY_PUNCTUATION, poi.punctuation)
+            putExtra(KEY_IMAGE, poi.image)
             putExtra(KEY_POI, poi)
         }
 
@@ -95,6 +96,7 @@ class PoiFragment : Fragment() {
         const val KEY_TITLE = "poi_extra_title"
         const val KEY_DESCRIPTION = "poi_extra_description"
         const val KEY_PUNCTUATION = "poi_extra_punctuation"
+        const val KEY_IMAGE = "poi_extra_image"
         const val KEY_POI = "poi_extra"
     }
 }

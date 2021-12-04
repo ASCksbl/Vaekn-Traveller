@@ -1,4 +1,4 @@
-package com.sdascension.traveller
+package com.sdascension.traveller.pages.authentication
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.sdascension.traveller.MainActivity
+import com.sdascension.traveller.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUp : AppCompatActivity() {

@@ -1,10 +1,12 @@
-package com.sdascension.traveller
+package com.sdascension.traveller.pages.authentication
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.sdascension.traveller.MainActivity
+import com.sdascension.traveller.R
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 

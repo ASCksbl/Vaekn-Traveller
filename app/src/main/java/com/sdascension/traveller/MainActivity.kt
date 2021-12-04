@@ -8,15 +8,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.sdascension.traveller.databinding.ActivityMainBinding
+import com.sdascension.traveller.pages.authentication.Login
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_poi.*
@@ -87,11 +85,16 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
 
-// TODO: Link of the json editor and view
+// TODO: Link of the json editor and view for POI
 // https://www.npoint.io/docs/45928b7adcaec7eb82fa // DON'T MODIFY
 // https://api.npoint.io/45928b7adcaec7eb82fa/poi
+
+// TODO: Link of the json editor and view for INFO (STILL NOT WORKING)
+// https://www.npoint.io/docs/663c4985405974153bf3 // DON'T MODIFY
+// https://api.npoint.io/663c4985405974153bf3/info
 
 
 

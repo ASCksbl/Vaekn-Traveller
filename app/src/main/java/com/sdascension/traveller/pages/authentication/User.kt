@@ -1,4 +1,4 @@
-package com.sdascension.traveller
+package com.sdascension.traveller.pages.authentication
 
 // This class is for authentication
 class User {

@@ -45,14 +45,23 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/txtPoiPunctuation"
+            android:id="@+id/txtPuncDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtPoiDescription"
             android:layout_marginTop="2dp"
-            android:layout_toStartOf="@+id/arrow"
             android:layout_toEndOf="@+id/imgPoi"
+            android:text="Punctuation: " />
+
+        <TextView
+            android:id="@+id/txtPoiPunctuation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPoiDescription"
+            android:layout_toEndOf="@id/txtPuncDesc"
+            android:layout_marginTop="2dp"
             android:text="Punctuation" />
+
 
         <ImageView
             android:id="@+id/arrow"

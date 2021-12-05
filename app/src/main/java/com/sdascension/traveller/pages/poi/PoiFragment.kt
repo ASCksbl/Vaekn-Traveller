@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sdascension.traveller.R
 import com.sdascension.traveller.databinding.FragmentPoiBinding
-import com.sdascension.traveller.pages.info.InfoFragment
+import com.sdascension.traveller.pages.info.InfoActivity
 import kotlinx.android.synthetic.main.fragment_poi.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -75,7 +75,7 @@ class PoiFragment : Fragment() {
 
     // Function to intent and navigate to Info
     private fun navigateToInfo(poi: Poi) {
-        val intent = Intent(activity, InfoFragment::class.java).apply {
+        val intent = Intent(activity, InfoActivity::class.java).apply {
             putExtra(KEY_TITLE, poi.title)
             putExtra(KEY_DESCRIPTION, poi.description)
             putExtra(KEY_PUNCTUATION, poi.punctuation)

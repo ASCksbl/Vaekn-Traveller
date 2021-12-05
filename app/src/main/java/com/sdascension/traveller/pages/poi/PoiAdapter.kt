@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sdascension.traveller.R
-import com.sdascension.traveller.pages.info.InfoFragment
+import com.sdascension.traveller.pages.info.InfoActivity
 import com.squareup.picasso.Picasso
 
 // Adapter for Poi Recycler View
@@ -52,14 +52,16 @@ class PoiAdapter(
 
     override fun onBindViewHolder(holder: PoiViewHolder, position: Int) {
         val poi = poi[position]
+        // Onclick for every single recycler view item, passing information to Info Activity
         holder.itemView.setOnClickListener {
-            val intent = Intent(mContext, InfoFragment::class.java)
+            val intent = Intent(mContext, InfoActivity::class.java)
             intent.putExtra("title", poi.title)
             intent.putExtra("description", poi.description)
             intent.putExtra("punctuation", poi.punctuation)
             intent.putExtra("image", poi.image)
             mContext.startActivity(intent)
         }
+        // Set the recycler's view information
         holder.title.text = poi.title
         holder.description.text = poi.description
         Picasso.get().load(poi.image).into(holder.image)

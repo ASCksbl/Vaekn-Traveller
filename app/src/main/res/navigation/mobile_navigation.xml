@@ -17,10 +17,9 @@
         android:label="@string/menu_poi"
         tools:layout="@layout/fragment_poi" />
 
-    <!--TODO: Change activity info to fragment -->
     <activity
         android:id="@+id/nav_info"
-        android:name="com.sdascension.traveller.pages.info.InfoFragment"
+        android:name="com.sdascension.traveller.pages.info.InfoActivity"
         android:label="@string/menu_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/activity_info" />
 </navigation>

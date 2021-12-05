@@ -1,46 +1,37 @@
 package com.sdascension.traveller.pages.info
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.sdascension.traveller.R
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_info.*
+import kotlinx.android.synthetic.main.activity_info.*
 
-// TODO: Change this activity to a fragment
-class InfoFragment : AppCompatActivity() {
+class InfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_info)
+        setContentView(R.layout.activity_info)
 
 
         // Display a back button in the top of the activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // TODO: Add Functionality to the info fragment
-        Log.d(
-            TAG, "onCreate"
-        )
+        // TODO: Addition (Not in use)
 //        val title = intent.getStringExtra(PoiFragment.KEY_TITLE)
 //        val description = intent.getStringExtra(PoiFragment.KEY_DESCRIPTION)
 //        val punctuation = intent.getStringExtra(PoiFragment.KEY_PUNCTUATION)
 //        val image = intent.getStringExtra(PoiFragment.KEY_IMAGE)
 //        val poi = intent.getParcelableExtra<Info>(PoiFragment.KEY_POI)
 
-
-//        Log.d(TAG, "Title: $title")
-//        Log.d(TAG, "Description: $description")
-//        Log.d(TAG, "Punctuation: $punctuation")
-//        Log.d(TAG, "Poi: $poi")
-
+        // Intent all the information from poi to info
         var intent = intent
         val title = intent.getStringExtra("title")
         val description = intent.getStringExtra("description")
         val punctuation = intent.getStringExtra("punctuation")
         val image = intent.getStringExtra("image")
 
+        // Set all the information passed into the information activity
         infoTitle.text = title
         infoDescription.text = description
         infoPunctuation.text = punctuation
@@ -60,7 +51,7 @@ class InfoFragment : AppCompatActivity() {
     }
 
     companion object {
-        private val TAG = InfoFragment::class.java.simpleName
+        private val TAG = InfoActivity::class.java.simpleName
     }
 
 }

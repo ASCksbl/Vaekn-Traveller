@@ -1,4 +1,4 @@
-package com.sdascension.traveller
+package com.sdascension.traveller.pages.poi
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,6 +9,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.sdascension.traveller.R
 import com.sdascension.traveller.databinding.ActivityPoiMapBinding
 
 class PoiMapActivity : AppCompatActivity(), OnMapReadyCallback {

@@ -32,7 +32,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".PoiMapActivity"
+            android:name=".pages.poi.PoiMapActivity"
             android:exported="false"
             android:label="@string/title_activity_poi_map" />
         <activity

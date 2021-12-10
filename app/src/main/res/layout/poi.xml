@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:background="#D0D2E4">
+        android:background="@drawable/title_background">
 
         <ImageView
             android:id="@+id/imgPoi"
@@ -29,9 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/imgPoi"
-            android:layout_toStartOf="@+id/arrow"
             android:text="Title"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <TextView
@@ -40,9 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtPoiTitle"
             android:layout_toEndOf="@+id/imgPoi"
-            android:layout_toStartOf="@+id/arrow"
             android:text="Description"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/txtPuncDesc"
@@ -51,6 +49,7 @@
             android:layout_below="@id/txtPoiDescription"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/imgPoi"
+            android:textColor="@color/white"
             android:text="Punctuation: " />
 
         <TextView
@@ -60,18 +59,9 @@
             android:layout_below="@id/txtPoiDescription"
             android:layout_toEndOf="@id/txtPuncDesc"
             android:layout_marginTop="2dp"
+            android:textColor="@color/white"
             android:text="Punctuation" />
 
-
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_arrow_poi" />
 
     </RelativeLayout>
 

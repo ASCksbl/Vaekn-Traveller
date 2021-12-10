@@ -26,9 +26,8 @@ class SignUp : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         // Button to go to LogIn activity
-        btnLogin.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
+        btnLogRegister.setOnClickListener {
+            onBackPressed()
         }
 
         // Button to SignUp
@@ -56,6 +55,11 @@ class SignUp : AppCompatActivity() {
                     Toast.makeText(this@SignUp, "Some error occurred", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right)
     }
 
     // Functionality to add user to FireBase

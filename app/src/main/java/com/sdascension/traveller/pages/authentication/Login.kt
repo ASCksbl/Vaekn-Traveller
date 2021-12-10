@@ -24,9 +24,9 @@ class Login : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         // Button to go to SignUp activity
-        btnSignUp.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
-            startActivity(intent)
+        btnRegLogin.setOnClickListener {
+            startActivity(Intent(this, SignUp::class.java))
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
         }
 
         // Button to LogIn

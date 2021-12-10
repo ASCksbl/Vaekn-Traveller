@@ -2,7 +2,6 @@ package com.sdascension.traveller.pages.poi
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
@@ -64,40 +63,22 @@ class PoiFragment : Fragment() {
         return view
     }
 
-    // Function for the click in each poi
+    //     Function for the click in each poi
     private fun poiOnClick(poi: Poi?) {
-        Log.d(TAG, "Click on: $poi")
         poi?.let {
             navigateToInfo(it)
         }
     }
 
-
     // Function to intent and navigate to Info
     private fun navigateToInfo(poi: Poi) {
-        val intent = Intent(activity, InfoActivity::class.java).apply {
-            putExtra(KEY_TITLE, poi.title)
-            putExtra(KEY_DESCRIPTION, poi.description)
-            putExtra(KEY_PUNCTUATION, poi.punctuation)
-            putExtra(KEY_IMAGE, poi.image)
-            putExtra(KEY_POI, poi)
-        }
-
+        val intent = Intent(activity, InfoActivity::class.java)
         startActivity(intent)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        private val TAG = PoiFragment::class.java.simpleName
-        const val KEY_TITLE = "poi_extra_title"
-        const val KEY_DESCRIPTION = "poi_extra_description"
-        const val KEY_PUNCTUATION = "poi_extra_punctuation"
-        const val KEY_IMAGE = "poi_extra_image"
-        const val KEY_POI = "poi_extra"
     }
 }
 

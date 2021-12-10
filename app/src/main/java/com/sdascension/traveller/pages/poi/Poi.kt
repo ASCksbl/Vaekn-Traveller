@@ -8,7 +8,10 @@ import kotlinx.android.parcel.Parcelize
 data class Poi(
     val title: String,
     val description: String,
+    val completedesc: String,
     val image: String,
-    val punctuation: String
+    val punctuation: String,
+    val latitude: Double,
+    val longitude: Double
 ) : Parcelable
 

@@ -16,10 +16,10 @@ import com.squareup.picasso.Picasso
 class PoiAdapter(
     private val poi: List<Poi>,
     private val mContext: Context,
-    private val onClick: (Poi?) -> Unit
-
+    private val onClick: (Poi?) -> Unit,
 ) :
     RecyclerView.Adapter<PoiAdapter.PoiViewHolder>() {
+
 
     // Holder for Poi Recycler View
     inner class PoiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -57,17 +57,21 @@ class PoiAdapter(
             val intent = Intent(mContext, InfoActivity::class.java)
             intent.putExtra("title", poi.title)
             intent.putExtra("description", poi.description)
+            intent.putExtra("completedesc", poi.completedesc)
             intent.putExtra("punctuation", poi.punctuation)
             intent.putExtra("image", poi.image)
+            intent.putExtra("latitude", poi.latitude)
+            intent.putExtra("longitude", poi.longitude)
             mContext.startActivity(intent)
         }
-        // Set the recycler's view information
+        // Set the recyclers view information
         holder.title.text = poi.title
         holder.description.text = poi.description
         Picasso.get().load(poi.image).into(holder.image)
         holder.punctuation.text = poi.punctuation
         holder.bind(poi = poi)
     }
+
 
 }
 

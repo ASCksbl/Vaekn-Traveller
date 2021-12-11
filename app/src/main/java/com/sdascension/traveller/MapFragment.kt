@@ -18,7 +18,7 @@ class MapFragment : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_map)
         createFragment()
-
+        
         // Display a back button in the top of the activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

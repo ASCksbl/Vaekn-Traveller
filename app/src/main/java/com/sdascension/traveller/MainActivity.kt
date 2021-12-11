@@ -89,11 +89,9 @@ class MainActivity : AppCompatActivity() {
 }
 
 // TODO: Link of the json editor and view for POI
-// https://www.npoint.io/docs/45928b7adcaec7eb82fa // DON'T MODIFY
+// https://www.npoint.io/docs/45928b7adcaec7eb82fa // EDITOR DON'T MODIFY
 // https://api.npoint.io/45928b7adcaec7eb82fa/poi
 
-// TODO: Link of the json editor and view for COORDINATES
-// https://www.npoint.io/docs/663c4985405974153bf3
 
 
 

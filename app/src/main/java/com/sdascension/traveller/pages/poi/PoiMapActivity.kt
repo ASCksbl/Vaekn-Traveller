@@ -47,7 +47,7 @@ class PoiMapActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.animateCamera(
             CameraUpdateFactory.newLatLngZoom(
                 latLng,
-                15f
+                20f
             ),
             4000,
             null

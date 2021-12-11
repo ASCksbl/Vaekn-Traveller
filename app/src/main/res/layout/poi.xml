@@ -9,8 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="@drawable/title_background">
+        android:background="@color/white"
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/imgPoi"
@@ -20,8 +20,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:src="@mipmap/ic_app_launcher"
-            android:contentDescription="Poi Image" />
+            android:contentDescription="Poi Image"
+            android:src="@mipmap/ic_app_launcher" />
 
         <TextView
             android:id="@+id/txtPoiTitle"
@@ -30,7 +30,7 @@
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/imgPoi"
             android:text="Title"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textStyle="bold" />
 
         <TextView
@@ -40,7 +40,7 @@
             android:layout_below="@id/txtPoiTitle"
             android:layout_toEndOf="@+id/imgPoi"
             android:text="Description"
-            android:textColor="@color/white" />
+            android:textColor="@color/blue" />
 
         <TextView
             android:id="@+id/txtPuncDesc"
@@ -49,18 +49,19 @@
             android:layout_below="@id/txtPoiDescription"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/imgPoi"
-            android:textColor="@color/white"
-            android:text="Punctuation: " />
+            android:text="Punctuation: "
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtPoiPunctuation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtPoiDescription"
-            android:layout_toEndOf="@id/txtPuncDesc"
             android:layout_marginTop="2dp"
-            android:textColor="@color/white"
-            android:text="Punctuation" />
+            android:layout_toEndOf="@id/txtPuncDesc"
+            android:text="Punctuation"
+            android:textColor="@color/blue" />
 
 
     </RelativeLayout>

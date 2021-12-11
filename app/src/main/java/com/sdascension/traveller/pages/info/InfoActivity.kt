@@ -20,7 +20,6 @@ class InfoActivity : AppCompatActivity() {
         // Display a back button in the top of the activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
         // Intent all the information from poi to info
         val intent = intent
         val title = intent.getStringExtra("title")

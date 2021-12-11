@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pages.poi.PoiFragment"
-    android:id="@+id/infoLayout">
+    android:id="@+id/infoLayout"
+    android:background="@drawable/side_nav_bar_blue">
 
     <TextView
         android:id="@+id/txtPOITitle"
@@ -14,15 +15,16 @@
         android:textSize="30dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textColor="@color/blue" />
+        android:textColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/txtPOITitle"
-        tools:listitem="@layout/poi"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/side_nav_bar_blue"
         tools:itemCount="5"
-        android:layout_marginBottom="10dp" />
+        tools:listitem="@layout/poi" />
 
 </RelativeLayout>

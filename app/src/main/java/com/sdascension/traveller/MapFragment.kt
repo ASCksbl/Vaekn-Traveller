@@ -18,7 +18,7 @@ class MapFragment : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_map)
         createFragment()
-        
+
         // Display a back button in the top of the activity
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
@@ -34,6 +34,7 @@ class MapFragment : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         createMarker()
+
     }
 
     // Function to locate and set a marker
@@ -55,4 +56,6 @@ class MapFragment : AppCompatActivity(), OnMapReadyCallback {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }

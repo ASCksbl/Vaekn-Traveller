@@ -20,7 +20,6 @@ class PoiAdapter(
 ) :
     RecyclerView.Adapter<PoiAdapter.PoiViewHolder>() {
 
-
     // Holder for Poi Recycler View
     inner class PoiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -71,7 +70,5 @@ class PoiAdapter(
         holder.punctuation.text = poi.punctuation
         holder.bind(poi = poi)
     }
-
-
 }
 

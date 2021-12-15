@@ -56,6 +56,7 @@ class PoiFragment : Fragment() {
                 d("kevin", "onFailure")
             }
         })
+
         poiViewModel =
             ViewModelProvider(this)[PoiViewModel::
             class.java]
@@ -81,5 +82,3 @@ class PoiFragment : Fragment() {
         _binding = null
     }
 }
-
-

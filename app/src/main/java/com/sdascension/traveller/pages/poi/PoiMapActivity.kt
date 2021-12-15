@@ -31,7 +31,6 @@ class PoiMapActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
     }
 
-    // TODO: Put the correct coordinates in the json
     // Map marker and location for each poi
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap

@@ -1,14 +1,20 @@
 package com.sdascension.traveller
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -25,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDbRef: DatabaseReference
+    private lateinit var map: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,8 +73,13 @@ class MainActivity : AppCompatActivity() {
 
     // Function for intent to the MapFragment
     fun onLocate(view: View) {
-        val intent = Intent(this@MainActivity, MapFragment::class.java)
-        startActivity(intent)
+        if (isLocationPermissionGranted()) {
+            enableLocation()
+            val intent = Intent(this@MainActivity, MapFragment::class.java)
+            startActivity(intent)
+        } else {
+            requestLocationPermission()
+        }
     }
 
     // Function to apply a functionality to log out
@@ -86,6 +98,100 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    // Functions for permissions
+    private fun isLocationPermissionGranted() = ContextCompat.checkSelfPermission(
+        this,
+        Manifest.permission.ACCESS_FINE_LOCATION
+    ) == PackageManager.PERMISSION_GRANTED
+
+    private fun enableLocation() {
+        if (!::map.isInitialized) return
+        if (isLocationPermissionGranted()) {
+            if (ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED
+            )
+                map.isMyLocationEnabled = true
+        } else {
+            requestLocationPermission()
+        }
+    }
+
+    private fun requestLocationPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
+        ) {
+            Toast.makeText(
+                this,
+                "Go to your phone settings and accept location permission",
+                Toast.LENGTH_LONG
+            ).show()
+        } else {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_CODE_LOCATION
+            )
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            REQUEST_CODE_LOCATION -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED
+                )
+                    map.isMyLocationEnabled = true
+            } else {
+                Toast.makeText(
+                    this,
+                    "To activate location go to settings to accept permissions",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            else -> {}
+        }
+    }
+
+    override fun onResumeFragments() {
+        super.onResumeFragments()
+        if (!::map.isInitialized) return
+        if (!isLocationPermissionGranted()) {
+            if (ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED
+            )
+                map.isMyLocationEnabled = false
+            Toast.makeText(
+                this,
+                "To activate location go to settings to accept permissions",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    companion object {
+        const val REQUEST_CODE_LOCATION = 0
+    }
 }
 
 // TODO: Link of the json editor and view for POI

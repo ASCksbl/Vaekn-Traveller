@@ -1,5 +1,6 @@
 package com.sdascension.traveller.pages.poi
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.sdascension.traveller.R
@@ -34,6 +36,10 @@ class PoiMapActivity : AppCompatActivity(), OnMapReadyCallback {
     // Map marker and location for each poi
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        val bitmap = BitmapFactory.decodeResource(
+            resources,
+            R.drawable.ic_map,
+            BitmapFactory.Options().apply { inDensity = 250 })
         val title = intent.getStringExtra("title")
         val description = intent.getStringExtra("description")
         val latitude = intent.getDoubleExtra("latitude", 0.0)
@@ -41,6 +47,7 @@ class PoiMapActivity : AppCompatActivity(), OnMapReadyCallback {
         val latLng = LatLng(latitude, longitude)
         mMap.addMarker(
             MarkerOptions().position(latLng).title(title).snippet(description)
+                .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
         )
 
         mMap.animateCamera(

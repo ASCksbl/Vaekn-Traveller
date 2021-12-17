@@ -1,5 +1,6 @@
 package com.sdascension.traveller
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -34,14 +36,19 @@ class MapFragment : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         createMarker()
-
     }
 
     // Function to locate and set a marker
     private fun createMarker() {
+        val bitmap = BitmapFactory.decodeResource(
+            resources,
+            R.drawable.ic_map,
+            BitmapFactory.Options().apply { inDensity = 250 })
         val coordinates = LatLng(10.39288811241211, -75.4820300510872)
-        map.addMarker(MarkerOptions().position(coordinates).title("Marker is in Cartagena"))
-        map.moveCamera(CameraUpdateFactory.newLatLng(coordinates))
+        map.addMarker(
+            MarkerOptions().position(coordinates).title("Marker is in Cartagena")
+                .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
+        )
         map.animateCamera(
             CameraUpdateFactory.newLatLngZoom(coordinates, 10f),
             4000, null

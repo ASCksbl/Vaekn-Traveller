@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sdascension.traveller.R
 import com.sdascension.traveller.databinding.FragmentPoiBinding
@@ -21,7 +20,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class PoiFragment : Fragment() {
 
-    private lateinit var poiViewModel: PoiViewModel
     private var _binding: FragmentPoiBinding? = null
 
     override fun onCreateView(
@@ -57,9 +55,6 @@ class PoiFragment : Fragment() {
             }
         })
 
-        poiViewModel =
-            ViewModelProvider(this)[PoiViewModel::
-            class.java]
         _binding = FragmentPoiBinding.inflate(inflater, container, false)
         return view
     }
